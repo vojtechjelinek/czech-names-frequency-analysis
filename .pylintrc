@@ -1,0 +1,22 @@
+[BASIC]
+# Regular expression which should only match correct function names
+function-rgx=^[_a-z][a-z0-9_]*$
+
+# Regular expression which should only match correct method names
+method-rgx=^([_a-z][a-z0-9_]*|__[a-z0-9]+__)$
+
+# Regular expression which should only match correct constant names
+const-rgx=^(([A-Z_][A-Z0-9_]*)|(__.*__)|([a-z_]+_models)|([a-z_]+_services))$
+
+# Regular expression which should match good variable names
+variable-rgx=[a-z_]+
+
+[FORMAT]
+
+max-line-length=80
+
+indent-string='    '
+
+[MESSAGES CONTROL]
+
+disable=C0111,R0903

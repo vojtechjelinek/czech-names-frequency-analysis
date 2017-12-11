@@ -233,13 +233,7 @@ def run():
     data_man, data_woman = filter_sex_and_recount(data)
     graphs_for_generations(data_man, add_to_title="Muži")
     graphs_for_generations(data_woman, add_to_title="Ženy")
-    names_to_plot = get_first_n_names_sorted(
-        data_man, quantity=5, sort_key=lambda name_data: name_data[1]["SUM"])
-    #show_names_graph(names_to_plot, data_man)
-    names_to_plot = get_first_n_names_sorted(
-        data, quantity=10,
-        sort_key=lambda name_data: max(name_data[1]["NORMALIZED_FREQUENCIES"]))
-    #show_names_graph(names_to_plot, data)
+
 
 if __name__ == "__main__":
     run()

@@ -200,6 +200,7 @@ def show_names_graph(names_to_plot, data, title="", highlight_x=None):
 
     plt.title(title)
     plt.legend()
+    plt.tight_layout()
 
     plt.show()
 
@@ -226,8 +227,8 @@ def run():
 
     data = load_data()
     data = filter_years(data, year_from=1925)
-    merge_multinames(data)
     filter_names(data)
+    merge_multinames(data)
 
     data_man, data_woman = filter_sex_and_recount(data)
     graphs_for_generations(data_man, add_to_title="Muži")

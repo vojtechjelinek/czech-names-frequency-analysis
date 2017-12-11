@@ -210,6 +210,7 @@ def get_first_n_names_sorted(data, quantity, sort_key):
         data["NAMES"].items(), key=sort_key, reverse=True)[:quantity]
     return tuple(name for name, _ in sorted_names_data)
 
+
 def graphs_for_generations(data, add_to_title):
     for generation_name, generation_range in GENERATIONS:
         data_in_year_range = filter_years_and_recount(
@@ -221,6 +222,7 @@ def graphs_for_generations(data, add_to_title):
         show_names_graph(
             names_to_plot, data, title=generation_name + " — " + add_to_title,
             highlight_x=generation_range)
+
 
 def run():
     configure_matplotlib()
